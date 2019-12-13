@@ -2,7 +2,12 @@
 title: "Importance of being uncertain"
 author: IBiG
 date: January 14th, 2020
-output: revealjs::revealjs_presentation
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: true
+    transition: none
 ---
 
 ###############################################################
