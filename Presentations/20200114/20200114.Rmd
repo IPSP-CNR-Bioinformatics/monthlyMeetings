@@ -2,42 +2,21 @@
 title: "Importance of being uncertain"
 author: IBiG
 date: January 14th, 2020
-output:
-  revealjs::revealjs_presentation:
-    theme: sky
-    highlight: pygments
-    center: true
-    transition: none
+output: 
+  ioslides_presentation:
+        widescreen: true
 ---
 
-###############################################################
-# R file to create Presentation
-###############################################################
 
-# Load libraries
-library(revealjs)
+# 001
+```{r}
+library(tidyverse)
+ggplot(mtcars, aes(cyl, drat)) +
+    geom_point()
+```
 
-# In the morning
 
-## Getting up
 
-- Turn off alarm
-- Get out of bed
 
-## Breakfast
-
-- Eat eggs
-- Drink coffee
-
-# In the evening
-
-## Dinner
-
-- Eat spaghetti
-- Drink wine
-
-## Going to sleep
-
-- Get in bed
-- Count sheep
-
+# Interesting link
+https://en.wikipedia.org/wiki/Sampling_bias#Historical_examples
