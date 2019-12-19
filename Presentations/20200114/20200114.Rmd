@@ -1,22 +1,34 @@
 ---
-title: "Importance of being uncertain"
+title: "Importance of being uncertain\n\nHow samples are used to estimate population statistics and what this means in terms of uncertainty"
 author: IBiG
-date: January 14th, 2020
-output: 
-  ioslides_presentation:
-        widescreen: true
+date: "January 14th, 2020\n\n Points of Significance - Nature Methods"
+output:
+      xaringan::moon_reader:
+        css: ["my.css","default", "default-fonts", "hygge"]
 ---
 
+# Introduzione del ciclo di incontri
 
-# 001
-```{r}
-library(tidyverse)
-ggplot(mtcars, aes(cyl, drat)) +
-    geom_point()
-```
+## Obiettivi
+1. Pianificazione degli esperimenti
+1. Raccolta dei dati
+1. Analisi dei dati
+1. Interpretazione dei risultati
 
+--
 
+## Modalita'
+1. Gli incontri si svolgeranno come dei Journal clubs.
+1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri con **cadenza mensile**.    
+1. Verra' utilizzato come linea guida la rubrica di _Nature Methods_: .bold[Point of Significance].
 
+???
 
-# Interesting link
-https://en.wikipedia.org/wiki/Sampling_bias#Historical_examples
+Le mie note
+
+---
+.center[
+# Importance of being uncertain
+]
+#### How samples are used to estimate population statistics and what this means in terms of uncertainty 
+---
