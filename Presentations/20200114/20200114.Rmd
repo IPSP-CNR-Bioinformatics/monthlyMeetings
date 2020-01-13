@@ -10,19 +10,22 @@ output:
 
 # Introduzione del ciclo di incontri
 
+## Modalita'
+1. Cadenza mensile.
+1. Durata di massimo 1 ora.
+1. Gli incontri si svolgeranno come dei Journal clubs.
+1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri.
+1. Verra' utilizzato come linea guida la rubrica di _Nature Methods_: .bold[Point of Significance].
+1. Ogni suggerimento o proposta di tema dai colleghi e' il benvenuto.
+
+--
+
 ## Obiettivi
 1. Pianificazione degli esperimenti
 1. Raccolta dei dati
 1. Analisi dei dati
 1. Interpretazione dei risultati
-
---
-
-## Modalita'
-1. Gli incontri si svolgeranno come dei Journal clubs.
-1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri con **cadenza mensile**.    
-1. Verra' utilizzato come linea guida la rubrica di _Nature Methods_: .bold[Point of Significance].
-1. Ogni suggerimento o proposta di tema dai colleghi e' il benvenuto.
+1. Visualizzazioni grafiche
 
 ???
 
@@ -50,7 +53,44 @@ It tells us the chances of being wrong.
 
 ???
 
-La statistica non da un numero che ci dice se abbiamo ragione ho meno, la statistica da un range di probabilita'. Da incertezza
+La statistica non da un numero che ci dice se abbiamo ragione ho meno, la statistica da un range di probabilita. Da incertezza
+
+---
+
+.center[
+# Monty Hall problem
+
+No other statistical puzzle comes so close to fooling all the people all the time [and] even Nobel physicists systematically give the wrong answer]
+
+---
+## Game show
+
+- You are given the choice of three doors
+ 
+--
+
+- Behind one door is a car; behind the others, goats.
+  
+--
+
+- You pick a door, say No. 1, and the host, who knows what is behind the doors, opens another door, say No. 3, which has a goat.
+  
+--
+
+- He then says to you, "Do you want to pick door No. 2?".
+  
+-- 
+
+.center[# Is it to your advantage to switch your choice?] 
+
+---
+
+class: center, middle
+
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://i.imgur.com/HN8ZXYe.png")
+```
 
 ---
 .center[
