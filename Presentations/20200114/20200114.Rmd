@@ -32,30 +32,6 @@ output:
 Le mie note
 
 ---
-class: inverse
-
-.center[
-# Importance of being uncertain
-]
-
-#### How samples are used to estimate population statistics and what this means in terms of uncertainty 
-
-<br>
-<br>
-
---
-
-.content-box-grey[
-.center[.black[Statistics does not tell us whether we are right. 
-
-It tells us the chances of being wrong.
-]]]
-
-???
-
-La statistica non da un numero che ci dice se abbiamo ragione ho meno, la statistica da un range di probabilita. Da incertezza
-
----
 
 .center[
 # Monty Hall problem
@@ -93,6 +69,88 @@ knitr::include_graphics("https://i.imgur.com/HN8ZXYe.png")
 ```
 
 ---
+
+.center[.Large[Our main goal]]
+
+.content-box-grey[
+.center[.black[To help you **move beyond** an intuitive understanding of fundamental statistics relevant to your work.
+
+Our presentation will be practical and cogent, with focus on foundational concepts, practical tips and common misconceptions
+
+]]]
+
+
+???
+
+approximately half the articles published in medical journals that use statistical methods use them incorrectly
+
+---
+
+class: inverse
+
+.center[
+# Sampling and uncertainty
+]
+
+#### How samples are used to estimate population statistics and what this means in terms of uncertainty 
+
+<br>
+<br>
+
+--
+
+.content-box-grey[
+.center[.black[Statistics does not tell us whether we are right. 
+
+It tells us the chances of being wrong.
+]]]
+
+???
+
+La statistica non da un numero che ci dice se abbiamo ragione o meno, la statistica da un range di probabilita. Da incertezza
+
+---
+
+.center[
+## Statistics
+]
+
+--
+.pull-left[
+.small[
+### Descriptive
+
+- summarizes the main features of a data set
+
+- measures such as the mean and standard deviation
+]
+]
+
+--
+
+.pull-right[
+.small[
+### Inferential
+
+- generalizes from observed data
+
+- make inferences about the population
+]
+]
+
+--
+
+<br>
+<br>
+
+Underpinning both are the concepts of sampling and estimation: 
+
+- collecting data
+
+- quantifying the uncertainty
+
+---
+
 .center[
 ## 1936 USA Presidential Election
 
