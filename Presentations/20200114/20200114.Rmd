@@ -151,6 +151,86 @@ Underpinning both are the concepts of sampling and estimation:
 
 ---
 
+# Population
+
+.bold[
+Set of all entities about which we make inferences
+]
+
+--
+
+<br>
+
+.center[
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://imgur.com/D9etism.png")
+```
+]
+
+<br>
+
+The frequency histogram of all possible values is called the **population distribution**. 
+
+???
+
+Ciao
+
+---
+
+### We are typically interested in inferring:
+
+.center[
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://imgur.com/D9etism.png")
+```
+]
+
+- The **mean** is calculated as the arithmetic average of values and can be unduly influenced by extreme values
+  
+- The **standard deviation** is calculated based on the square of the distance of each value from the mean
+
+- The **median** is a more robust measure of location and more suitable for distributions that are skewed or otherwise irregularly shaped
+
+
+---
+
+.center[
+## PROBLEM
+]
+
+<br>
+
+.content-box-grey[
+.center[Fiscal and practical constraints limit our access to the population! 
+
+We cannot directly measure the mean and the s.d.
+
+The best we can do is estimate them using **collected data through the process of sampling**
+]]
+
+---
+
+## SAMPLING
+
+.center[
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://i.imgur.com/Y2nst5N.png")
+```
+]
+
+
+- Samples are sets of data drawn from the population, characterized by the number of data points n, usually denoted by X and indexed by a numerical subscript. 
+
+--
+
+- Larger samples approximate the population better.
+
+--
+
+- To maintain validity, the sample must be representative of the population.
+
+---
+
 .center[
 ## 1936 USA Presidential Election
 
@@ -190,3 +270,12 @@ Underpinning both are the concepts of sampling and estimation:
  
 1. Literary Digest ceased publishing within a few months of the election
 
+---
+
+## SAMPLING
+
+simple random sample, where all values in the population have an equal chance of being selected at each stage of the sampling process. Representative does not mean that the sample is a miniature replica of the population. In general, a sample will not resemble the population unless n is very large. When constructing a sample, it is not always obvious whether it is free from bias.
+
+.content-box-red[
+.black[Samples are our windows to the population, and their statistics are used to estimate those of the population.]
+]
