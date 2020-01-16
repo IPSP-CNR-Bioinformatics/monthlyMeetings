@@ -10,35 +10,42 @@ output:
 
 # Introduzione del ciclo di incontri
 
+.small[
 ## Modalita'
 1. Cadenza mensile.
 1. Durata di massimo 1 ora.
 1. Gli incontri si svolgeranno come dei Journal clubs.
-1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri.
 1. Verra' utilizzato come linea guida la rubrica di _Nature Methods_: .bold[Point of Significance].
+1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri.
 1. Ogni suggerimento o proposta di tema dai colleghi e' il benvenuto.
+]
+
+???
+
+## Perche incontri sulla statistica?
+
+- approximately half the articles published in medical journals that use statistical methods use them incorrectly
 
 --
 
+.small[
 ## Obiettivi
 1. Pianificazione degli esperimenti
 1. Raccolta dei dati
 1. Analisi dei dati
 1. Interpretazione dei risultati
 1. Visualizzazioni grafiche
+]
 
-???
-
-Le mie note
 
 ---
 
 .center[
 # Monty Hall problem
+]
 
-No other statistical puzzle comes so close to fooling all the people all the time [and] even Nobel physicists systematically give the wrong answer]
+--
 
----
 ## Game show
 
 - You are given the choice of three doors
@@ -55,18 +62,20 @@ No other statistical puzzle comes so close to fooling all the people all the tim
 
 - He then says to you, "Do you want to pick door No. 2?".
   
--- 
-
-.center[# Is it to your advantage to switch your choice?] 
+.center[
+### Is it to your advantage to switch your choice? 
+]
 
 ---
 
 class: center, middle
 
 
-```{r echo=FALSE, out.width="80%"}
+```{r echo=FALSE, out.width="75%"}
 knitr::include_graphics("https://i.imgur.com/HN8ZXYe.png")
 ```
+
+.small[http://bit.ly/371drqZ]
 
 ---
 
@@ -82,7 +91,7 @@ Our presentation will be practical and cogent, with focus on foundational concep
 
 ???
 
-approximately half the articles published in medical journals that use statistical methods use them incorrectly
+- andare oltre una comprensione intuitiva
 
 ---
 
@@ -115,7 +124,7 @@ La statistica non da un numero che ci dice se abbiamo ragione o meno, la statist
 ## Statistics
 ]
 
---
+
 .pull-left[
 .small[
 ### Descriptive
@@ -126,7 +135,7 @@ La statistica non da un numero che ci dice se abbiamo ragione o meno, la statist
 ]
 ]
 
---
+
 
 .pull-right[
 .small[
@@ -138,7 +147,6 @@ La statistica non da un numero che ci dice se abbiamo ragione o meno, la statist
 ]
 ]
 
---
 
 <br>
 <br>
@@ -156,8 +164,6 @@ Underpinning both are the concepts of sampling and estimation:
 .bold[
 Set of all entities about which we make inferences
 ]
-
---
 
 <br>
 
@@ -221,11 +227,7 @@ knitr::include_graphics("https://i.imgur.com/Y2nst5N.png")
 
 - Samples are sets of data drawn from the population, characterized by the number of data points n, usually denoted by X and indexed by a numerical subscript. 
 
---
-
 - Larger samples approximate the population better.
-
---
 
 - To maintain validity, the sample must be representative of the population.
 
@@ -274,8 +276,158 @@ knitr::include_graphics("https://i.imgur.com/Y2nst5N.png")
 
 ## SAMPLING
 
-simple random sample, where all values in the population have an equal chance of being selected at each stage of the sampling process. Representative does not mean that the sample is a miniature replica of the population. In general, a sample will not resemble the population unless n is very large. When constructing a sample, it is not always obvious whether it is free from bias.
+.large[Random sampling]
+
+--
+
+- where all values in the population have an equal chance of being selected at each stage of the sampling process.
+
+--
+
+- Representative does not mean that the sample is a miniature replica of the population.
+
+--
+
+- A sample will not resemble the population unless n is very large.
+
+--
+
+#### When constructing a sample, it is not always obvious whether it is free from bias.
+
+--
 
 .content-box-red[
 .black[Samples are our windows to the population, and their statistics are used to estimate those of the population.]
+]
+
+---
+
+## Central Limit Theorem
+
+.center[
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://i.imgur.com/Y2nst5N.png")
+```
+]
+
+.small[
+
+- Notice that the distribution of sample means looks quite different than the population one
+
+- It appears similar in shape to a normal distribution.
+
+- Also notice that its spread, is quite a bit smaller than that of the population
+]
+
+--
+
+.content-box-red[
+.center[
+.large[
+Despite these differences, the population and sampling distributions are intimately related
+]
+]
+]
+
+---
+
+## Central Limit Theorem
+
+.center[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://i.imgur.com/Y2nst5N.png")
+```
+]
+
+- The CLT tells us that the distribution of sample means (Fig. 2c) will become increasingly close to a normal distribution as the sample size increases
+  
+- Regardless of the shape of the population distribution (Fig. 2a) as long as the frequency of extreme values drops off quickly.
+
+<br>
+
+--
+
+- The CLT also relates population and sample distribution parameters 
+
+.center[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://i.imgur.com/Fu7pPpT.png")
+```
+]
+
+???
+
+delta X:  is the spread of sample means
+
+delta: is the spread of the underlying population.
+
+As we increase n: delta X will decrease (our samples will have more similar means) but delta will not change (sam-pling has no effect on the population)
+
+---
+
+## A demonstration of the CLT for different population distributions 
+
+.center[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://i.imgur.com/IFJmWIP.png")
+```
+]
+
+- Increase in precision of our estimate of the population mean with increase in sample size
+
+- Notice that it is still possible for a sample mean to fall far from the population mean, especially for small n
+ 
+---
+
+## A demonstration of the CLT for different population distributions 
+
+.center[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://i.imgur.com/IFJmWIP.png")
+```
+]
+
+
+.content-box-grey[
+For example, with samples of size n = 3 from the irregular distribution, the number of times the sample mean fell outside the standard deviation interval ranged from 7.6% to 8.6%.
+
+.large[ Thus, use caution when interpreting means of small samples ]
+]
+
+---
+
+.center[
+## CONCLUSION
+]
+
+.small[
+- Always keep in mind that your **measurements are estimates**, which you should not endow with an aura of exactitude and finality. 
+]
+
+--
+
+.small[
+- The **omnipresence of variability** will ensure that each sample will be different.
+]
+
+--
+
+.center[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://i.imgur.com/SA4aOVQ.png")
+```
+]
+
+.center[.large[To double your precision, you must collect four times more data]]
+
+---
+
+class: inverse
+
+.Huge[
+.vert[
+.center[
+END
+]
+]
 ]
