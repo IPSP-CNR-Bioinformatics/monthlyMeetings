@@ -184,6 +184,61 @@ knitr::include_graphics("https://i.imgur.com/wuR2nUi.png")
 
 class: inverse, center, middle
 
+
+# Part II
+
+
+### How uncertainty is represented
+
+---
+
+## Error bars
+
+1. The **uncertainty** in estimates is customarily represented using error bars
+
+--
+
+1. A lot of **misconceptions** persist about how error bars relate to statistical significance
+
+--
+
+1. When asked to estimate the required separation between two points with error bars for a difference at significance P = 0.05, **only 22% of respondents were correct**
+
+--
+
+<br>
+<br>
+
+.center[
+.content-box-red[
+.Large[WHAT ABOUT YOU?]
+]
+<br>
+.Large[http://bit.ly/2ufXHSR]
+]
+
+
+---
+
+## Error bars
+
+- Standard deviation:
+
+- Standard error:
+
+- Confident intervals:
+
+.center[
+```{r echo=FALSE, out.width="105%"}
+knitr::include_graphics("https://i.imgur.com/FQMc2rW.png")
+```
+]
+
+
+---
+
+class: inverse, center, middle
+
 .Huge[
 END
 ]
