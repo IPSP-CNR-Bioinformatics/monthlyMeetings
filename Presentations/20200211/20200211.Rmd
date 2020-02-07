@@ -222,16 +222,91 @@ class: inverse, center, middle
 
 ## Error bars
 
-- Standard deviation:
+- **Standard deviation**: it shows how the data are spread
 
-- Standard error:
+- **Standard error**: it describes how accurate the mean estimate is
 
-- Confident intervals:
+- **Confident intervals**: it captures the true mean μ on 95% of occasions
 
 .center[
-```{r echo=FALSE, out.width="105%"}
-knitr::include_graphics("https://i.imgur.com/FQMc2rW.png")
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("https://i.imgur.com/QtpJsdK.png")
 ```
+]
+
+---
+## Error bars
+
+<br>
+<br>
+.center[
+```{r echo=FALSE, out.width="105%"}
+library(magick)
+a <- image_read("https://i.imgur.com/FQMc2rW.png")
+
+image_write(a, path = "aaa.png", format = "png")
+```
+
+<img src="aaa.png">
+
+![an image](aaa.png)
+
+]
+
+
+---
+# Eigth rules
+.small[
+1. When showing error bars, always describe
+in the **figure legends** what they are.
+
+1. The value of n must be stated in
+the **figure legend**.
+
+1. Error bars and statistics
+should only be shown for **independently repeated experiments**, and never for replicates
+
+1. Experimental biologists
+are usually trying to compare experimental results with controls, it is usually
+**appropriate to show inferential error bars**, such as SE or CI, rather than SD
+
+1. 95% CIs capture μ on 95%
+of occasions, so you can be 95% confident your interval includes μ
+
+1. when n = 3, and double the
+SE bars don’t overlap, P < 0.05, and if
+double the SE bars just touch, P is close to
+0.05
+
+1. with 95% CIs and n = 3,
+overlap of one full arm indicates P ≈
+0.05, and overlap of half an arm indicates
+P ≈ 0.01
+
+1. In the case of repeated measurements on the same group,
+CIs or SE bars are irrelevant to comparisons within the same group
+]
+---
+
+# Conclusion
+
+1. Error bars can be valuable for understanding results and deciding whether the authors’ conclusions are
+justifi ed by the data
+
+--
+
+1. When first seeing a figure with error bars, ask yourself:
+  - “What is n?
+  - Are they independent experiments, or just replicates?”
+  - “What kind of error bars are they?”
+
+--
+
+<br>
+.content-box-red[.center[Error bars and other statistics can only be a guide
+
+You need to use your biological understanding to appreciate the meaning of the numbers shown in any figure
+]
 ]
 
 
