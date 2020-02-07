@@ -241,9 +241,16 @@ knitr::include_graphics("https://i.imgur.com/QtpJsdK.png")
 <br>
 .center[
 ```{r echo=FALSE, out.width="105%"}
-a <- knitr::include_graphics("https://i.imgur.com/FQMc2rW.png")
-magick::image_crop(a, "100x150+50")
+library(magick)
+a <- image_read("https://i.imgur.com/FQMc2rW.png")
+
+image_write(a, path = "aaa.png", format = "png")
 ```
+
+<img src="aaa.png">
+
+![an image](aaa.png)
+
 ]
 
 
