@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>20200114.utf8</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="IBiG" />
+    <link href="20200114_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="20200114_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="20200114_files/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <p>Importance of being uncertain</p>
+How samples are used to estimate population statistics and what this means in terms of uncertainty
+### IBiG
+### <p>January 14th, 2020</p>
+Points of Significance - Nature Methods
+
+---
+
+
+# Introduzione del ciclo di incontri
+
+.small[
+## Modalita'
+1. Cadenza mensile.
+1. Durata di massimo 1 ora.
+1. Gli incontri si svolgeranno come dei Journal clubs.
+1. Verra' utilizzato come linea guida la rubrica di _Nature Methods_: .bold[Point of Significance].
+1. I membri dell'IBiG si prendereanno la responsabilita' di preparare gli incontri.
+1. Ogni suggerimento o proposta di tema dai colleghi e' il benvenuto.
+]
+
+???
+
+## Perche incontri sulla statistica?
+
+- approximately half the articles published in medical journals that use statistical methods use them incorrectly
+
+--
+
+.small[
+## Obiettivi
+1. Pianificazione degli esperimenti
+1. Raccolta dei dati
+1. Analisi dei dati
+1. Interpretazione dei risultati
+1. Visualizzazioni grafiche
+]
+
+
+---
+
+.center[
+# Monty Hall problem
+]
+
+--
+
+## Game show
+
+- You are given the choice of three doors
+ 
+--
+
+- Behind one door is a car; behind the others, goats.
+  
+--
+
+- You pick a door, say No. 1, and the host, who knows what is behind the doors, opens another door, say No. 3, which has a goat.
+  
+--
+
+- He then says to you, "Do you want to pick door No. 2?".
+  
+.center[
+### Is it to your advantage to switch your choice? 
+]
+
+---
+
+class: center, middle
+
+
+&lt;img src="https://i.imgur.com/HN8ZXYe.png" width="75%" /&gt;
+
+.small[http://bit.ly/371drqZ]
+
+---
+
+.center[.Large[Our main goal]]
+
+.content-box-grey[
+.center[.black[To help you **move beyond** an intuitive understanding of fundamental statistics relevant to your work.
+
+Our presentation will be practical and cogent, with focus on foundational concepts, practical tips and common misconceptions
+
+]]]
+
+
+???
+
+- andare oltre una comprensione intuitiva
+
+---
+
+class: inverse
+
+.center[
+# Sampling and uncertainty
+]
+
+#### How samples are used to estimate population statistics and what this means in terms of uncertainty 
+
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+.content-box-grey[
+.center[.black[Statistics does not tell us whether we are right. 
+
+It tells us the chances of being wrong.
+]]]
+
+???
+
+La statistica non da un numero che ci dice se abbiamo ragione o meno, la statistica da un range di probabilita. Da incertezza
+
+---
+
+.center[
+## Statistics
+]
+
+
+.pull-left[
+.small[
+### Descriptive
+
+- summarizes the main features of a data set
+
+- measures such as the mean and standard deviation
+]
+]
+
+
+
+.pull-right[
+.small[
+### Inferential
+
+- generalizes from observed data
+
+- make inferences about the population
+]
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+Underpinning both are the concepts of sampling and estimation: 
+
+- collecting data
+
+- quantifying the uncertainty
+
+---
+
+# Population
+
+.bold[
+Set of all entities about which we make inferences
+]
+
+&lt;br&gt;
+
+.center[
+&lt;img src="https://imgur.com/D9etism.png" width="80%" /&gt;
+]
+
+&lt;br&gt;
+
+The frequency histogram of all possible values is called the **population distribution**. 
+
+???
+
+Ciao
+
+---
+
+### We are typically interested in inferring:
+
+.center[
+&lt;img src="https://imgur.com/D9etism.png" width="80%" /&gt;
+]
+
+- The **mean** is calculated as the arithmetic average of values and can be unduly influenced by extreme values
+  
+- The **standard deviation** is calculated based on the square of the distance of each value from the mean
+
+- The **median** is a more robust measure of location and more suitable for distributions that are skewed or otherwise irregularly shaped
+
+
+---
+
+.center[
+## PROBLEM
+]
+
+&lt;br&gt;
+
+.content-box-grey[
+.center[Fiscal and practical constraints limit our access to the population! 
+
+We cannot directly measure the mean and the s.d.
+
+The best we can do is estimate them using **collected data through the process of sampling**
+]]
+
+---
+
+## SAMPLING
+
+.center[
+&lt;img src="https://i.imgur.com/Y2nst5N.png" width="80%" /&gt;
+]
+
+
+- Samples are sets of data drawn from the population, characterized by the number of data points n, usually denoted by X and indexed by a numerical subscript. 
+
+- Larger samples approximate the population better.
+
+- To maintain validity, the sample must be representative of the population.
+
+---
+
+.center[
+## 1936 USA Presidential Election
+
+### Central event in the history of statistics and polling
+]
+
+--
+.pull-left[
+.small[
+### Literary Digest
+
+- Predict correctly the previous 4 elections
+
+- 10M people sample
+
+- Republican Alfred Mossman Landon wins by large majority
+]
+]
+
+--
+
+.pull-right[
+.small[
+### Statistician George Gallup
+
+- 0.05M people sample
+
+- Democratic Franklin D. Roosevelt wins 
+
+- With 0.003M he replicated the results of Literary Digest
+]
+]
+
+--
+
+1. Roosevelt won
+ 
+1. Literary Digest ceased publishing within a few months of the election
+
+---
+
+## SAMPLING
+
+.large[Random sampling]
+
+--
+
+- where all values in the population have an equal chance of being selected at each stage of the sampling process.
+
+--
+
+- Representative does not mean that the sample is a miniature replica of the population.
+
+--
+
+- A sample will not resemble the population unless n is very large.
+
+--
+
+#### When constructing a sample, it is not always obvious whether it is free from bias.
+
+--
+
+.content-box-red[
+.black[Samples are our windows to the population, and their statistics are used to estimate those of the population.]
+]
+
+---
+
+## Central Limit Theorem
+
+.center[
+&lt;img src="https://i.imgur.com/Y2nst5N.png" width="80%" /&gt;
+]
+
+.small[
+
+- Notice that the distribution of sample means looks quite different than the population one
+
+- It appears similar in shape to a normal distribution.
+
+- Also notice that its spread, is quite a bit smaller than that of the population
+]
+
+--
+
+.content-box-red[
+.center[
+.large[
+Despite these differences, the population and sampling distributions are intimately related
+]
+]
+]
+
+---
+
+## Central Limit Theorem
+
+.center[
+&lt;img src="https://i.imgur.com/Y2nst5N.png" width="50%" /&gt;
+]
+
+- The CLT tells us that the distribution of sample means (Fig. 2c) will become increasingly close to a normal distribution as the sample size increases
+  
+- Regardless of the shape of the population distribution (Fig. 2a) as long as the frequency of extreme values drops off quickly.
+
+&lt;br&gt;
+
+--
+
+- The CLT also relates population and sample distribution parameters 
+
+.center[
+&lt;img src="https://i.imgur.com/Fu7pPpT.png" width="50%" /&gt;
+]
+
+???
+
+delta X:  is the spread of sample means
+
+delta: is the spread of the underlying population.
+
+As we increase n: delta X will decrease (our samples will have more similar means) but delta will not change (sam-pling has no effect on the population)
+
+---
+
+## A demonstration of the CLT for different population distributions 
+
+.center[
+&lt;img src="https://i.imgur.com/IFJmWIP.png" width="50%" /&gt;
+]
+
+- Increase in precision of our estimate of the population mean with increase in sample size
+
+- Notice that it is still possible for a sample mean to fall far from the population mean, especially for small n
+ 
+---
+
+## A demonstration of the CLT for different population distributions 
+
+.center[
+&lt;img src="https://i.imgur.com/IFJmWIP.png" width="50%" /&gt;
+]
+
+
+.content-box-grey[
+For example, with samples of size n = 3 from the irregular distribution, the number of times the sample mean fell outside the standard deviation interval ranged from 7.6% to 8.6%.
+
+.large[ Thus, use caution when interpreting means of small samples ]
+]
+
+---
+
+.center[
+## CONCLUSION
+]
+
+.small[
+- Always keep in mind that your **measurements are estimates**, which you should not endow with an aura of exactitude and finality. 
+]
+
+--
+
+.small[
+- The **omnipresence of variability** will ensure that each sample will be different.
+]
+
+--
+
+.center[
+&lt;img src="https://i.imgur.com/SA4aOVQ.png" width="50%" /&gt;
+]
+
+.center[.large[To double your precision, you must collect four times more data]]
+
+---
+
+class: inverse
+
+.Huge[
+.vert[
+.center[
+END
+]
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
