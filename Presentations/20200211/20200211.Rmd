@@ -276,6 +276,9 @@ class: inverse, center, middle
 
 ]
 
+---
+
+<img src="EB_Fig2.jpg" width="1050">
 
 ---
 
