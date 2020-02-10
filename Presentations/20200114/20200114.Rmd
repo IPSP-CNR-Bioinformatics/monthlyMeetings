@@ -72,6 +72,7 @@ class: center, middle
 
 
 ```{r echo=FALSE, out.width="75%"}
+opts_knit$set(upload.fun = imgur_upload)
 knitr::include_graphics("https://i.imgur.com/HN8ZXYe.png")
 ```
 

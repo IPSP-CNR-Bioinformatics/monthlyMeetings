@@ -133,18 +133,13 @@ class: inverse, center, middle
 .center[
 .middle[
 
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("https://i.imgur.com/lh81sq4.png")
-```
+![a](lh81sq4.png)
 
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("https://i.imgur.com/sziS9F7.png")
-```
-
+<img src="sziS9F7.png" width="550">
 ]
 ]
 
-??
+???
 
 - The core element that gives the box plot its name is a box whose length is the IQR and whose width is arbitrary
 
