@@ -222,22 +222,63 @@ class: inverse, center, middle
 - **Confident intervals**: it captures the true mean μ on 95% of occasions
 
 .center[
-<img src="QtpJsdK.png" width="340">
+<img src="QtpJsdK.png" width="740">
 ]
 
 ---
+
+## Error bars
+
+<br>
+<br>
+.center[
+```{r echo=FALSE}
+# library(magick)
+# 
+# # Read image
+# a <- image_read("aaa.png")
+# 
+# # Crop and save
+# ##1
+# a1 <- image_crop(a, "1047x150")
+# image_write(a1, path = "a1.png", format = "png")
+# ## 2
+# a2 <- image_crop(a, "1047x200")
+# image_write(a2, path = "a2.png", format = "png")
+```
+
+<img src="a1.png" width="1050">
+
+]
+
+---
+
 ## Error bars
 
 <br>
 <br>
 .center[
 
-![an image](aaa.png)
+<img src="a2.png" width="1050">
+
+]
+
+---
+
+## Error bars
+
+<br>
+<br>
+.center[
+
+<img src="aaa.png" width="1050">
+
 
 ]
 
 
 ---
+
 # Eigth rules
 .small[
 1. When showing error bars, always describe
