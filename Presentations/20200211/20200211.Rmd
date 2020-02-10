@@ -161,16 +161,14 @@ class: inverse, center, middle
 1. For small sample sizes boxplots do not necessarily represent the distribution well
 
 .center[
-```{r echo=FALSE, out.width="30%"}
-knitr::include_graphics("https://i.imgur.com/wuR2nUi.png")
-```
+<img src="wuR2nUi.png" width="240">
 ]
 
 1. Strongly discourage using bar plots with error bars 
 
   - These charts continue to be prevalent (we counted 100 figures that used them in 2013 Nature Methods papers, compared to only 20 that used box plots)
   
-  - the choice of baseline can interfere with assessing relative sizes of means and their error bars
+  - The choice of baseline can interfere with assessing relative sizes of means and their error bars
  
   
 ##### Useful link: http://shiny.chemgrid.org/boxplotr/
@@ -224,9 +222,7 @@ class: inverse, center, middle
 - **Confident intervals**: it captures the true mean μ on 95% of occasions
 
 .center[
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("https://i.imgur.com/QtpJsdK.png")
-```
+<img src="QtpJsdK.png" width="340">
 ]
 
 ---
@@ -235,14 +231,6 @@ knitr::include_graphics("https://i.imgur.com/QtpJsdK.png")
 <br>
 <br>
 .center[
-```{r echo=FALSE, out.width="105%"}
-library(magick)
-a <- image_read("https://i.imgur.com/FQMc2rW.png")
-
-image_write(a, path = "aaa.png", format = "png")
-```
-
-<img src="aaa.png">
 
 ![an image](aaa.png)
 
