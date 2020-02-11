@@ -306,7 +306,7 @@ it is better to show individual data values
 ]
 ---
 
-# Eigth rules
+# Error bar rules
 
 
 --
@@ -322,13 +322,43 @@ in the **figure legends** what they are.
 - The value of n must be stated in
 the **figure legend**.
 ]
+.center[
 
---
+<img src="20200211_Fig4.png" width="600">
+
+]
+
+---
+
+# Error bar rules
+
+
+.small[
+- When showing error bars, always describe
+in the **figure legends** what they are.
+]
+
+
+.small[
+- The value of n must be stated in
+the **figure legend**.
+]
+
 
 .small[
 - Error bars and statistics
 should only be shown for **independently repeated experiments**, and never for replicates
 ]
+
+???
+
+- Consider trying to determine whether **deletion of a gene in mice affects tail length**. 
+
+- We could choose **one mutant mouse and one wild type**
+
+- **Perform 20 replicate measurements** of each of their tails. 
+
+- We could **calculate the means, SDs, and SEs** of the replicate measurements, but these would **not permit us to answer the central question** of whether gene deletion affects tail length, **because n would equal 1 for each genotype**, no matter how often each tail was measured
 
 --
 
@@ -354,22 +384,6 @@ double the SE bars just touch, P is close to
 0.05
 ]
 
---
-
-.small[
-- With 95% CIs and n = 3,
-overlap of one full arm indicates P ≈
-0.05, and overlap of half an arm indicates
-P ≈ 0.01
-]
-
---
-
-.small[
-- In the case of repeated measurements on the same group,
-CIs or SE bars are irrelevant to comparisons within the same group
-]
-
 ---
 
 # Conclusion
@@ -386,9 +400,9 @@ CIs or SE bars are irrelevant to comparisons within the same group
 --
 
 <br>
-.content-box-red[.center[Error bars and other statistics can only be a guide
+.content-box-red[.center[Error bars and other statistics **can only be a guide**
 
-You need to use your biological understanding to appreciate the meaning of the numbers shown in any figure
+You need to **use your biological understanding** to appreciate the meaning of the numbers shown in any figure
 ]
 ]
 
