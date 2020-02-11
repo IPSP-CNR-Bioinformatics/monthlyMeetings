@@ -14,11 +14,9 @@ output:
 
 1. Statistics do not tell us whether we are right. It tells us the **chances of being wrong**.
 
-1. The best we can do is estimate them using **collected data through the process of sampling**.
+1. Samples are our **windows to the population**, and their statistics are used to estimate those of the population.
 
 1. **Larger samples** approximate the population better.
-
-1. Samples are our **windows to the population**, and their statistics are used to estimate those of the population.
 
 1.  Always keep in mind that your **measurements are estimates**, which you should not endow with an aura of exactitude and finality. 
 
@@ -46,7 +44,7 @@ output:
 ```{r echo = FALSE}
 library(DT)
 library(broom)
-library(tidyverse)
+suppressMessages(library(tidyverse))
 
 mydata=with(anscombe,data.frame(xVal=c(x1,x2,x3,x4), yVal=c(y1,y2,y3,y4), mygroup=gl(4,nrow(anscombe))))
 
@@ -105,27 +103,17 @@ class: inverse, center, middle
 
 ## Box plots
 
-1. Visualization methods enhance our understanding of sample data and help us make comparisons across samples
+1. Visualization methods **enhance our understanding** of sample data and help us make comparisons across samples
 
---
+1. Box plot is a method for graphically depicting groups of numerical data through their **quartiles**
 
-1. Box plot is a method for graphically depicting groups of numerical data through their quartiles
-
---
-
-  - A quartile is a type of quantile which divides the number of data points into four more or less equal parts, or quarters. 
+  - A quartile is a type of quantile which **divides the number of data points into four more or less equal parts**, or quarters. 
     
---
+  - The **first quartile** (Q1) is defined as the middle number between the smallest number and the median of the data set
 
-  - The first quartile (Q1) is defined as the middle number between the smallest number and the median of the data set
-
---
-
-  - The interquartile range (IQR = Q3 − Q1), which covers the central 50% of the data
+  - The **interquartile range** (IQR = Q3 − Q1), which covers the central 50% of the data
   
---
-
-  - Quartiles are insensitive to outliers and preserve information about the center and spread
+  - Quartiles are **insensitive to outliers** and preserve information about the center and spread
   
 ---
 
@@ -133,27 +121,25 @@ class: inverse, center, middle
 .center[
 .middle[
 
-![a](lh81sq4.png)
-
-<img src="sziS9F7.png" width="550">
+<img src="sziS9F7.png" width="850">
 ]
 ]
 
 ???
 
-- The core element that gives the box plot its name is a box whose length is the IQR and whose width is arbitrary
+- The **core element** that gives the box plot its name is a box whose length is the **IQR** and whose width is arbitrary
 
-- A line inside the box shows the median, which is not necessarily central
+- A line inside the box shows the **median**, which is not necessarily central
 
-- The plot may be oriented vertically or horizontally
+- The plot may be oriented **vertically or horizontally**
 
-- Whiskers are conventionally extended to the most extreme data point that is no more than 1.5 × IQR from the edge of the box (Tukey style) or all the way to minimum and maximum of the data values (Spear style)
+- **Whiskers** are conventionally extended to the most extreme data point that is no more than 1.5 × IQR from the edge of the box (Tukey style) or all the way to minimum and maximum of the data values (Spear style)
 
-- The 1.5 multiplier corresponds to approximately ±2.7σ (where σ is s.d.) and 99.3% coverage of the data for a normal distribution
+- The **1.5 multiplier** corresponds to 99.3% coverage of the data for a normal distribution
 
-- Outliers beyond the whiskers may be individually plotted.
+- **Outliers** beyond the whiskers may be individually plotted.
 
-- Box plot construction requires a sample of at least n = 5 (preferably larger)
+- Box plot construction requires a **sample of at least n = 5** (preferably larger)
 ---
 
 ## Final considerations
@@ -173,6 +159,10 @@ class: inverse, center, middle
   
 ##### Useful link: http://shiny.chemgrid.org/boxplotr/
 
+???
+
+- Barplot nascondono la distribuzione del campione
+
 ---
 
 class: inverse, center, middle
@@ -189,11 +179,7 @@ class: inverse, center, middle
 
 1. The **uncertainty** in estimates is customarily represented using error bars
 
---
-
 1. A lot of **misconceptions** persist about how error bars relate to statistical significance
-
---
 
 1. When asked to estimate the required separation between two points with error bars for a difference at significance P = 0.05, **only 22% of respondents were correct**
 
@@ -210,6 +196,9 @@ class: inverse, center, middle
 .Large[http://bit.ly/2ufXHSR]
 ]
 
+???
+
+- Idee sbagliate
 
 ---
 
@@ -223,6 +212,16 @@ class: inverse, center, middle
 
 .center[
 <img src="QtpJsdK.png" width="740">
+]
+
+---
+
+## Confident intervals
+
+.center[
+
+<img src="20200211_Fig2.png" width="200%">
+
 ]
 
 ---
@@ -278,54 +277,111 @@ class: inverse, center, middle
 
 ---
 
-<img src="EB_Fig2.jpg" width="1050">
+## Error bars
+
+<br>
+.center[
+
+<img src="20200211_Fig3.png" width="1050">
+
+
+]
 
 ---
 
+## Error bars
+
+<br>
+<br>
+.center[
+.content-box-red[
+Be wary of error bars for small sample sizes
+
+THEY ARE NOT ROBUST
+
+it is better to show individual data values
+]
+
+
+]
+---
+
 # Eigth rules
+
+
+--
+
 .small[
-1. When showing error bars, always describe
+- When showing error bars, always describe
 in the **figure legends** what they are.
+]
 
-1. The value of n must be stated in
+--
+
+.small[
+- The value of n must be stated in
 the **figure legend**.
+]
 
-1. Error bars and statistics
+--
+
+.small[
+- Error bars and statistics
 should only be shown for **independently repeated experiments**, and never for replicates
+]
 
-1. Experimental biologists
+--
+
+.small[
+- Experimental biologists
 are usually trying to compare experimental results with controls, it is usually
 **appropriate to show inferential error bars**, such as SE or CI, rather than SD
+]
 
-1. 95% CIs capture μ on 95%
+--
+
+.small[
+- 95% CIs capture μ on 95%
 of occasions, so you can be 95% confident your interval includes μ
+]
 
-1. when n = 3, and double the
+--
+
+.small[
+- When n = 3, and double the
 SE bars don’t overlap, P < 0.05, and if
 double the SE bars just touch, P is close to
 0.05
+]
 
-1. with 95% CIs and n = 3,
+--
+
+.small[
+- With 95% CIs and n = 3,
 overlap of one full arm indicates P ≈
 0.05, and overlap of half an arm indicates
 P ≈ 0.01
+]
 
-1. In the case of repeated measurements on the same group,
+--
+
+.small[
+- In the case of repeated measurements on the same group,
 CIs or SE bars are irrelevant to comparisons within the same group
 ]
+
 ---
 
 # Conclusion
 
-1. Error bars can be valuable for understanding results and deciding whether the authors’ conclusions are
-justifi ed by the data
+1. Error bars can be valuable for understanding results and deciding whether the authors’ **conclusions are justified by the data**
 
 --
 
 1. When first seeing a figure with error bars, ask yourself:
-  - “What is n?
-  - Are they independent experiments, or just replicates?”
-  - “What kind of error bars are they?”
+  - What is n?
+  - Are they independent experiments, or just replicates?
+  - What kind of error bars are they?
 
 --
 
