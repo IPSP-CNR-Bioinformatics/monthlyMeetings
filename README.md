@@ -6,3 +6,4 @@ Incontri mensili di statistica, analisi ed interpretazione dei dati del Istituto
 | Giorno | Tema | Presentazione |
 |---|---|---|
 |Martedì 14 Gennaio| L'incertezza Statistica | link |
+|Martedì 11 Febbraio| Come viene rappresentata l'incertezza| link|
